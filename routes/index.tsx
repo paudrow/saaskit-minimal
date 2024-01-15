@@ -1,7 +1,6 @@
 // Copyright 2023-2024 the Deno authors. All rights reserved. MIT license.
 import type { State } from "@/plugins/session.ts";
 import Head from "@/components/Head.tsx";
-import ItemsList from "@/islands/ItemsList.tsx";
 import { defineRoute } from "$fresh/server.ts";
 
 export default defineRoute<State>((_req, ctx) => {
@@ -27,10 +26,7 @@ export default defineRoute<State>((_req, ctx) => {
         )}
       </Head>
       <main class="flex-1 p-4">
-        <ItemsList
-          endpoint={endpoint}
-          isSignedIn={isSignedIn}
-        />
+        <p>My main content</p>
       </main>
     </>
   );

@@ -4,7 +4,6 @@ import { getUser } from "@/utils/db.ts";
 import IconBrandGithub from "tabler_icons_tsx/brand-github.tsx";
 import Head from "@/components/Head.tsx";
 import GitHubAvatarImg from "@/components/GitHubAvatarImg.tsx";
-import ItemsList from "@/islands/ItemsList.tsx";
 import { defineRoute } from "$fresh/server.ts";
 import { PremiumBadge } from "@/components/PremiumBadge.tsx";
 
@@ -66,10 +65,6 @@ export default defineRoute<State>(
           <div class="flex justify-center p-4">
             <UserProfile {...user} />
           </div>
-          <ItemsList
-            endpoint={endpoint}
-            isSignedIn={isSignedIn}
-          />
         </main>
       </>
     );

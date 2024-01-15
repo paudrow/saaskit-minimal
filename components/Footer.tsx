@@ -1,7 +1,7 @@
 // Copyright 2023-2024 the Deno authors. All rights reserved. MIT license.
 import { SITE_NAME } from "@/utils/constants.ts";
-import IconBrandDiscord from "tabler_icons_tsx/brand-discord.tsx";
 import IconBrandGithub from "tabler_icons_tsx/brand-github.tsx";
+import IconBrandTwitter from "tabler_icons_tsx/brand-twitter.tsx";
 import IconRss from "tabler_icons_tsx/rss.tsx";
 
 function MadeWithFreshBadge() {
@@ -55,21 +55,12 @@ export default function Footer() {
       <p>© {SITE_NAME}</p>
       <nav class="nav-styles">
         <a
-          href="/blog"
-          class="link-styles data-[current]:!text-black data-[current]:dark:!text-white"
-        >
-          Blog
-        </a>
-        <a href="/feed" aria-label="Deno Hunt RSS Feed" class="link-styles">
-          <IconRss class="h-6 w-6" />
-        </a>
-        <a
-          href="https://discord.gg/deno"
+          href="https://twitter.com/audrow"
           target="_blank"
-          aria-label="Deno SaaSKit on Discord"
+          aria-label="Audrow on Twitter"
           class="link-styles"
         >
-          <IconBrandDiscord class="h-6 w-6" />
+          <IconBrandTwitter class="h-6 w-6" />
         </a>
         <a
           href="https://github.com/denoland/saaskit"
