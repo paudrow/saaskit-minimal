@@ -85,10 +85,10 @@ export default function Header(props: HeaderProps) {
           )}
         <div class="rounded-lg bg-gradient-to-tr from-secondary to-primary p-px">
           <a
-            href="/submit"
+            href="/"
             class="text-center text-white rounded-[7px] transition duration-300 px-4 py-2 block hover:bg-white hover:text-black hover:dark:bg-gray-900 hover:dark:!text-white"
           >
-            Submit
+            Call to Action
           </a>
         </div>
       </nav>

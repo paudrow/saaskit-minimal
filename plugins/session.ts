@@ -76,13 +76,5 @@ export default {
       path: "/dashboard",
       middleware: { handler: ensureSignedIn },
     },
-    {
-      path: "/api/me",
-      middleware: { handler: ensureSignedIn },
-    },
-    {
-      path: "/api/vote",
-      middleware: { handler: ensureSignedIn },
-    },
   ],
 } as Plugin<State>;

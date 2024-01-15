@@ -5,28 +5,19 @@ import { defineRoute } from "$fresh/server.ts";
 
 export default defineRoute<State>((_req, ctx) => {
   const isSignedIn = ctx.state.sessionUser !== undefined;
-  const endpoint = "/api/items";
+  const isSubscribed = ctx.state.sessionUser?.isSubscribed ?? false;
 
   return (
     <>
       <Head href={ctx.url.href}>
-        <link
-          as="fetch"
-          crossOrigin="anonymous"
-          href={endpoint}
-          rel="preload"
-        />
-        {isSignedIn && (
-          <link
-            as="fetch"
-            crossOrigin="anonymous"
-            href="/api/me/votes"
-            rel="preload"
-          />
-        )}
       </Head>
       <main class="flex-1 p-4">
         <p>My main content</p>
+          <p>
+          {isSignedIn && isSubscribed && "Signed in and subscribed!"}
+          {isSignedIn && !isSubscribed && "Signed in and not subscribed!"}
+          {!isSignedIn && "Not signed in!"}
+          </p>
       </main>
     </>
   );

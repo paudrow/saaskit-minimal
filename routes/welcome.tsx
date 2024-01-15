@@ -50,6 +50,11 @@ export default defineRoute((req, ctx) => {
       <Head title="Welcome" href={ctx.url.href} />
       <main class="flex-1 flex justify-center items-center">
         {!isGitHubSetup() && <SetupInstruction />}
+        {isGitHubSetup() && (
+          <div class="bg-green-50 dark:bg-gray-900 dark:border dark:border-green-800 rounded-xl max-w-screen-sm mx-auto p-8 space-y-2">
+            <h1 class="text-2xl font-medium">Welcome to SaaSKit!</h1>
+          </div>
+        )}
       </main>
     </>
   );
