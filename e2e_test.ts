@@ -2,13 +2,7 @@
 
 import { createHandler } from "$fresh/server.ts";
 import manifest from "@/fresh.gen.ts";
-import {
-  collectValues,
-  createUser,
-  getUser,
-  randomUser,
-  User,
-} from "@/utils/db.ts";
+import { createUser, getUser, randomUser, User } from "@/utils/db.ts";
 import { stripe } from "@/utils/stripe.ts";
 import {
   assert,
@@ -16,7 +10,6 @@ import {
   assertEquals,
   assertInstanceOf,
   assertNotEquals,
-  assertObjectMatch,
   assertStringIncludes,
 } from "std/assert/mod.ts";
 import { isRedirectStatus, STATUS_CODE } from "std/http/status.ts";
@@ -50,14 +43,6 @@ function assertHtml(resp: Response) {
 function assertJson(resp: Response) {
   assertInstanceOf(resp.body, ReadableStream);
   assertEquals(resp.headers.get("content-type"), "application/json");
-}
-
-function assertXml(resp: Response) {
-  assertInstanceOf(resp.body, ReadableStream);
-  assertEquals(
-    resp.headers.get("content-type"),
-    "application/atom+xml; charset=utf-8",
-  );
 }
 
 function assertText(resp: Response) {

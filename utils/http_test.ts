@@ -1,8 +1,6 @@
 // Copyright 2023-2024 the Deno authors. All rights reserved. MIT license.
-import { returnsNext, stub } from "std/testing/mock.ts";
-import { fetchValues, getCursor, redirect } from "./http.ts";
-import { assert, assertEquals, assertRejects } from "std/assert/mod.ts";
-import { STATUS_CODE } from "std/http/status.ts";
+import { getCursor, redirect } from "./http.ts";
+import { assert, assertEquals } from "std/assert/mod.ts";
 
 Deno.test("[http] redirect() defaults", () => {
   const location = "/hello-there";

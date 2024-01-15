@@ -13,11 +13,11 @@ export default defineRoute<State>((_req, ctx) => {
       </Head>
       <main class="flex-1 p-4">
         <p>My main content</p>
-          <p>
+        <p>
           {isSignedIn && isSubscribed && "Signed in and subscribed!"}
           {isSignedIn && !isSubscribed && "Signed in and not subscribed!"}
           {!isSignedIn && "Not signed in!"}
-          </p>
+        </p>
       </main>
     </>
   );
