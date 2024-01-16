@@ -135,40 +135,6 @@ The [utils/constants.ts](utils/constants.ts) file includes global values used
 across various aspects of the codebase. Update these values according to your
 needs.
 
-### Create a Blog Post
-
-1. Create a `.md` file in the [/posts](/posts) with the filename as the slug of
-   the blog post URL. E.g. a file with path `/posts/hello-there.md` will have
-   path `/blog/hello-there`.
-1. Write the
-   [Front Matter](https://daily-dev-tips.com/posts/what-exactly-is-frontmatter/)
-   then [Markdown](https://www.markdownguide.org/cheat-sheet/) text to define
-   the properties and content of the blog post.
-
-   ````md
-   ---
-   title: This is my first blog post!
-   publishedAt: 2022-11-04T15:00:00.000Z
-   summary: This is an excerpt of my first blog post.
-   ---
-
-   # Heading 1
-
-   Hello, world!
-
-   ```javascript
-   console.log("Hello World");
-   ```
-   ````
-1. Start the server:
-   ```bash
-   deno task start
-   ```
-1. Navigate to the URL of the newly created blog post. E.g.
-   `http://localhost:8000/blog/hello-there`.
-
-See other examples of blog post files in [/posts](/posts).
-
 ### Themes
 
 You can customize theme options such as spacing, color, etc. By default, Deno
